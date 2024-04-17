@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-import {useFilter} from '../hooks/useFilter'
+import {useFilter} from '../../hooks/useFilter'
 import { FilterType } from "@/types/filter-types";
 
 
@@ -36,6 +36,7 @@ function FilterNav(){
 
     const handleChange =(value)=>{
         setType(value)
+        console.log(type)
     }
 
     return(

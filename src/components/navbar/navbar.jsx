@@ -3,8 +3,8 @@
 import styled from 'styled-components'
 import { Saira_Stencil_One } from 'next/font/google';
 
-import SearchBar from './input/searchBar';
-import Cart from './Cart/cart';
+import SearchBar from '../input/searchBar';
+import Cart from '../Cart/cart';
 
 const sairaStencil = Saira_Stencil_One({
     subsets: ["latin"], 
@@ -36,7 +36,7 @@ function Navbar(){
 
     return(
         <NavContainer>  
-            <StyledLogo className={sairaStencil.className}>Caputteno</StyledLogo>
+            <StyledLogo className={sairaStencil.className}>Mínima</StyledLogo>
                 <StyledLeft>
                     <SearchBar placeholder='Procurando por algo específico?'/>
                     <Cart/>
