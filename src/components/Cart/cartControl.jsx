@@ -1,17 +1,20 @@
 import styled from "styled-components";
+import { useState } from "react";
 
-import CartIcon from "../icones/cartIcon";
 
-const StyledContainer = styled.div`
-    
-`
 
 function CartControl(){
-    return(
-        <StyledContainer>
-            <CartIcon/>
-        </StyledContainer>
-    )
-}
+    const [value, setValue] = useState(0)
+    
+    const HandleAdd = ()=>{
+        setValue(+1)
+    }
 
-export default CartControl
+    const HandleRemove = ()=>{
+        setValue(-1)
+        if(value < 0){
+            setValue(0)
+        }
+    }
+
+}

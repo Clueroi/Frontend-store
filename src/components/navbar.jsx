@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Saira_Stencil_One } from 'next/font/google';
 
 import SearchBar from './input/searchBar';
-import CartControl from './Cart/cartControl';
+import Cart from './Cart/cart';
 
 const sairaStencil = Saira_Stencil_One({
     subsets: ["latin"], 
@@ -30,13 +30,16 @@ const StyledLeft = styled.div`
     align-items:center;
 `
 
+
+
 function Navbar(){
+
     return(
         <NavContainer>  
             <StyledLogo className={sairaStencil.className}>Caputteno</StyledLogo>
                 <StyledLeft>
                     <SearchBar placeholder='Procurando por algo específico?'/>
-                    <CartControl/>
+                    <Cart/>
                 </StyledLeft>   
         </NavContainer>
     )

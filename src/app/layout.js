@@ -1,6 +1,8 @@
 import { Saira } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "@/components/navbar";
+import { FilterContextProvider } from "@/contexto/filter-context";
 
 const saira = Saira({ subsets: ["latin"] });
 
@@ -13,8 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={saira.className}>
-        <Navbar/>
-        {children}</body>
+          <FilterContextProvider>
+            <Navbar/>
+            {children}
+          </FilterContextProvider>
+        </body>
     </html>
   );
 }
