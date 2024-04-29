@@ -1,15 +1,15 @@
 "use client"
 
 import styled from 'styled-components'
-import { Saira_Stencil_One } from 'next/font/google';
+import { Saira_Stencil_One } from 'next/font/google'
 
-import SearchBar from '../input/searchBar';
-import Cart from '../Cart/cart';
+import SearchBar from '../input/searchBar'
+import Cart from '../Cart/cart'
 
 const sairaStencil = Saira_Stencil_One({
     subsets: ["latin"], 
     weight:['400'],
-    });
+    })
 
 const NavContainer = styled.div`
     display:flex;
